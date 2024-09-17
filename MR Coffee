@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة القهوة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .menu {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: 300px;
+        }
+        .item {
+            margin: 10px 0;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .item:hover {
+            background-color: #f0f0f0;
+        }
+        .details {
+            display: none;
+            margin-top: 5px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu">
+    <h2>قائمة القهوة</h2>
+    <div class="item" onclick="toggleDetails('coffee1')">
+        قهوة أمريكية - 15 ريال
+        <div id="coffee1" class="details">قهوة سادة قوية المنكهة.</div>
+    </div>
+    <div class="item" onclick="toggleDetails('coffee2')">
+        قهوة لاتيه - 20 ريال
+        <div id="coffee2" class="details">قهوة مع الحليب المبخر ورغوة الحليب.</div>
+    </div>
+    <div class="item" onclick="toggleDetails('coffee3')">
+        قهوة إسبريسو - 18 ريال
+        <div id="coffee3" class="details">قهوة مركزة وسريعة التحضير.</div>
+    </div>
+    <div class="item" onclick="toggleDetails('coffee4')">
+        كابتشينو - 22 ريال
+        <div id="coffee4" class="details">قهوة مع الحليب ورغوة كثيفة.</div>
+    </div>
+</div>
+
+<script>
+    function toggleDetails(id) {
+        const detail = document.getElementById(id);
+        detail.style.display = detail.style.display === "block" ? "none" : "block";
+    }
+</script>
+
+</body>
+</html>
